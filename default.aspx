@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="hw5StyleSheet.css" />
     <title></title>
 
 </head>
@@ -11,10 +12,10 @@
     <form id="form1" runat="server">
     <div>
     
-    Mike's Mortgage Calculator
+    Anthony's Mortgage Calculator
         
         <br /><br />
-     
+        <% If Not IsPostBack Then%>
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
         <br /><br />      
@@ -28,18 +29,24 @@
         <br /><br />
 
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
+        <p> Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.</p>
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="84px" />
+      
+          <%Else%>
         
         <br /><br />
                 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        Monthly Payment: &nbsp;<span class="bold"> <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></span>
         
         <br /><br />
         
-        <asp:GridView ID="loanGridView" runat="server" />
-            
+        <asp:GridView ID="loanGridView" runat="server" CssClass="cssgridview" >
+            <AlternatingRowStyle CssClass="alt" />
+        </asp:GridView>
+           
+        <%End If%>
         </div>
     </form>
 </body>

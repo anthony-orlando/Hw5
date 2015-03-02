@@ -1,0 +1,8 @@
+﻿body {background-color:lightcoral; color:black;
+}
+
+.bold{font-weight:bold; font-size:24px;}
+
+.cssgridview{width:auto; margin:5px 0 10px 0; border:solid 1px #525252; border-collapse:collapse; text-align:center;
+             font-family:'Comic Sans MS'
+}
