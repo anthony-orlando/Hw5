@@ -18,13 +18,24 @@
         
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
+        &nbsp;
+        <asp:RequiredFieldValidator ID="rfv_amount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Please enter loan amount"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="rev_loanAmount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Enter a valid loan amount" ValidationExpression="^\d{1,8}$"></asp:RegularExpressionValidator>
+                  
         <br /><br />      
         
-        Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
+        Annual Interest %:&nbsp <em> <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>(10)</em>&nbsp
+        
+        &nbsp;
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="**Enter interest in percent"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="rev_interest" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="**Enter a valid interest rate" ValidationExpression="^\d{1,2}$"></asp:RegularExpressionValidator>
         
         <br /><br />
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+         &nbsp;
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="**Enter term in years"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="rev_term" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="**Enter a valid term in years" ValidationExpression="^\d{1,2}$"></asp:RegularExpressionValidator>
          <br /><br />
         <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="84px" />
         
