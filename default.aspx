@@ -15,7 +15,7 @@
     Anthony's Mortgage Calculator
         
         <br /><br />
-        <% If Not IsPostBack Then%>
+        
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   
         <br /><br />      
@@ -25,16 +25,15 @@
         <br /><br />
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
-        
-        <br /><br />
-
-        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
-        <p> Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.</p>
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <br /><br />
         <asp:Button ID="btn_clear" runat="server" Text="Clear" Width="84px" />
-      
-          <%Else%>
+        
+        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
+        <% If Not IsPostBack Then%>
+        <p> Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.</p>
+   
+         <%Else%>
+        
         
         <br /><br />
                 

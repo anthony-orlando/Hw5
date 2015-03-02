@@ -91,5 +91,6 @@ Partial Class _Default
         tbAnnualInterest.Text = String.Empty
         tbLoanTerm.Text = String.Empty
         lblMonthlyPmt.Text = String.Empty
+
     End Sub
 End Class
