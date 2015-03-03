@@ -87,10 +87,10 @@ Partial Class _Default
     End Sub
 
     Protected Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
-        tbLoanAmt.Text = String.Empty
-        tbAnnualInterest.Text = String.Empty
-        tbLoanTerm.Text = String.Empty
-        lblMonthlyPmt.Text = String.Empty
+        tbLoanAmt.Text = ""
+        tbAnnualInterest.Text = ""
+        tbLoanTerm.Text = ""
+        lblMonthlyPmt.Text = ""
 
     End Sub
 End Class
