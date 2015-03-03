@@ -20,7 +20,7 @@
                 <td align="right">
         Loan Amount:</td> <td align="left"><asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
                   </td><td> <asp:RequiredFieldValidator ID="rfv_amount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Please enter loan amount"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="rev_loanAmount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Enter a valid loan amount" ValidationExpression="^\d{1,8}$"></asp:RegularExpressionValidator></td>
+        <asp:RegularExpressionValidator ID="rev_loanAmount" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="**Enter a valid loan amount" ValidationExpression="^(\$|)([1-9]\d{0,2}(\,\d{3})*|([1-9]\d*))(\.\d{2})?$"></asp:RegularExpressionValidator></td>
             </tr>
              
        <tr>
@@ -53,7 +53,8 @@
         
         <br /><br />
                 
-        Monthly Payment: &nbsp;<span class="bold"> <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></span>
+        <asp:Label ID="Lbl_monthPmt" runat="server" Text="Monthly payment: "></asp:Label>
+&nbsp;&nbsp;<span class="bold"> <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></span>
         
         <br /><br />
         

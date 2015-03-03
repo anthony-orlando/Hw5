@@ -78,8 +78,8 @@ Partial Class _Default
 
             'Loops to next counterStart (Continues loop until counterStart requirements are met (loanTerm)).
         Next counterStart
-
-
+        Lbl_monthPmt.Visible = True
+        loanGridView.Visible = True
         loanGridView.DataSource = loanAmortTbl
         loanGridView.DataBind()
 
@@ -87,10 +87,12 @@ Partial Class _Default
     End Sub
 
     Protected Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
-        tbLoanAmt.Text = ""
-        tbAnnualInterest.Text = ""
-        tbLoanTerm.Text = ""
-        lblMonthlyPmt.Text = ""
+        tbLoanAmt.Text = String.Empty
+        tbAnnualInterest.Text = String.Empty
+        tbLoanTerm.Text = String.Empty
+        lblMonthlyPmt.Text = String.Empty
+        loanGridView.Visible = False
+        Lbl_monthPmt.Visible = False
 
     End Sub
 End Class
